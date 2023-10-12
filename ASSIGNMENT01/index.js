@@ -3,6 +3,8 @@ const app = express();
 const port = 3000;
 
 const handlebars = require('express-handlebars');
+const indexRouter = require('./routers/index');
+
 app.set('view engine', 'hbs');
 app.engine('hbs', handlebars.engine({
     layoutsDir: __dirname + '/views/layouts',
@@ -13,47 +15,10 @@ app.engine('hbs', handlebars.engine({
 
 app.use(express.static('public'))
 
-fakeApi = () => {
-return [
-        {
-            name: 'Katarina',
-            lane: 'midlaner'
-        },
-        {
-            name: 'Jayce',
-            lane: 'toplaner'
-        },
-        {
-            name: 'Heimerdinger',
-            lane: 'toplaner'
-        },
-        {
-            name: 'Zed',
-            lane: 'midlaner'
-        },
-        {
-            name: 'Azir',
-            lane: 'midlaner'
-        }
-];
-}
-
-app.get('/', (req, res) => {
-    res.render('home', {layout: 'index', suggestedChamps: fakeApi(), listExists: true});
-});
+app.use('/', indexRouter);
 
 
-app.get('/project', (req, res) => {
-    res.render('project', {layout: 'index', suggestedChamps: fakeApi(), listExists: true});
-});
-app.get('/contact', (req, res) => {
-    res.render('contact', {layout: 'index', suggestedChamps: fakeApi(), listExists: true});
-});
 
-
-app.get('/blog', (req, res) => {
-    res.render('blog', {layout: 'index', suggestedChamps: fakeApi(), listExists: true});
-});
 
 
 
