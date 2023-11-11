@@ -20,11 +20,8 @@ and the reason Why I choose certain modules.
 First, clone the repo
 
 ```sh
-git clone https://github.com/FaztWeb/first-node-express-app
-```
 
-move to the folder
-
+git clone https://github.com/200492921/COMP2068JSFrameworks
 ```sh
 cd first-node-express-app
 ```
