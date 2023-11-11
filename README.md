@@ -15,28 +15,5 @@ and the reason Why I choose certain modules.
 - Divide content using partials feature from Template engines
 - Deploy our app using a simple service called Now(A service from Zeit Company)
 
-### Installation
 
-First, clone the repo
-
-```sh
-git clone https://github.com/FaztWeb/first-node-express-app
-```
-
-move to the folder
-
-```sh
-cd first-node-express-app
-```
-
-install dependencies:
-
-```sh
-npm install
-```
-
-execute the project
-
-```sh
-npm run dev
 ```
